@@ -1,0 +1,37 @@
+# Copy to workspace/02-profile/config.yml (onboarding does this for you)
+user_language: en          # language the agent talks to you in
+country: ""               # country/region of the job search, e.g. Poland
+cv_language_policy: follow_vacancy   # follow_vacancy | fixed
+cv_fixed_language: ""      # used when policy = fixed
+cv_headings_language: en   # section headings language (kept constant to match the template)
+cv_language_rules: ""      # free text, e.g. "vacancy in PL -> body Polish, headings English"
+job_analysis_language: follow_vacancy   # follow_vacancy | user_language | fixed (language used inside <Target>-job.md)
+page_format: A4            # fixed default
+cv_pages: 1                # fixed default
+country_fields: []         # extra country-specific items, e.g. ["gdpr_clause"]
+target_roles: []           # e.g. ["Marketing Manager"]
+locations: []              # e.g. ["Warsaw", "Remote"]
+work_mode: []              # remote / hybrid / onsite
+salary_expectation: ""     # e.g. "4000-5000 EUR/month" (used in cover letters if wanted)
+cover_letter: ask          # always / never / ask
+cover_letter_language_policy: follow_cv   # follow_cv | follow_vacancy | fixed
+cover_letter_fixed_language: ""           # used when cover_letter_language_policy = fixed
+cover_letter_format: pdf+txt              # pdf+txt (PDF deliverable + clean .txt in source/ for web textareas) | pdf
+notion:
+  mode: unset              # create | existing | none
+  parent_page_url: ""
+  applications_db_id: ""
+  applications_data_source_url: ""
+  notion_language: ""      # language for Notion hub & entries (e.g. en, uk, pl)
+  scout_db_id: ""
+  scout_data_source_url: ""
+tracker:
+  type: notion             # notion | excel | csv | markdown | notes | sheets
+  path: ""                 # local path if non-Notion
+scout:
+  enabled: false
+  schedule: "0 9,17 * * *" # cron expression (e.g., 09:00 and 17:00 daily)
+  timezone: ""             # IANA timezone, e.g. Europe/Warsaw
+  runner: ""               # antigravity_app | launchd | task_scheduler | cloud | manual
+  min_match: 0.55
+  browser_enabled: true

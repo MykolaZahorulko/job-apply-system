@@ -1,0 +1,5 @@
+# Personal workspace — never commit (created automatically during onboarding)
+workspace/
+node_modules/
+.DS_Store
+HANDOFF.md

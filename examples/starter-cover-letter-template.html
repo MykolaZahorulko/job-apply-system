@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{FULL_NAME}} - Cover Letter - {{TARGET_TITLE}}</title>
+<style>
+  /* ATS-safe Cover Letter: CV-matched header band, ultra-short 3-paragraph layout, no GDPR clutter */
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; line-height: 1.62; color: #111; }
+  .page { width: 210mm; height: 297mm; display: flex; flex-direction: column; background: #fff; }
+  @media screen {
+    body { background: #e5e7eb; padding: 18px 0; display: flex; justify-content: center; }
+    .page { box-shadow: 0 4px 24px rgba(0, 0, 0, .14); }
+  }
+  header { background: #14294b; color: #fff; padding: 11mm 17mm 9mm; }
+  h1 { font-size: 26pt; line-height: 1; margin: 0; text-transform: uppercase; letter-spacing: .04em; }
+  .title { font-size: 12.2pt; margin-top: 4pt; font-weight: 500; }
+  .rule { width: 32mm; height: 2px; background: #fff; margin: 7pt 0; }
+  .contact { font-size: 9.6pt; }
+  .contact a { color: #fff; text-decoration: underline; text-underline-offset: 2pt; }
+  main { padding: 13mm 20mm; flex: 1; }
+  .recipient { color: #2a4a7a; font-size: 10.5pt; font-weight: 700; margin-bottom: 14pt; }
+  .greeting { font-weight: 700; margin-bottom: 12pt; }
+  p { margin: 0 0 13pt; }
+  .signoff { margin-top: 18pt; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>{{FULL_NAME}}</h1>
+    <div class="title">{{TARGET_TITLE}}</div>
+    <div class="rule"></div>
+    <div class="contact">{{CITY, COUNTRY}} &nbsp;|&nbsp; <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> &nbsp;|&nbsp; <a href="tel:{{PHONE_RAW}}">{{PHONE}}</a> &nbsp;|&nbsp; <a href="{{LINKEDIN_URL}}">LinkedIn</a></div>
+  </header>
+
+  <main>
+    <div class="recipient">{{COMPANY_NAME}}</div>
+    <p class="greeting">{{GREETING}}</p>
+    <p>{{HOOK_AND_TOP_SHIPPED_PROOF}}</p>
+    <p>{{RELEVANT_STACK_AND_VALUE}}</p>
+    <p>{{LOGISTICS_AND_CTA}}</p>
+    <div class="signoff">{{CLOSING}},<br><strong>{{FULL_NAME}}</strong></div>
+  </main>
+</div>
+</body>
+</html>

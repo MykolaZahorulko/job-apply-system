@@ -1,0 +1,14 @@
+{
+  "name": "job-apply-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "playwright install chromium",
+    "pdf": "node html-to-pdf.mjs",
+    "check": "node check-pdf.mjs"
+  },
+  "dependencies": {
+    "pdf-parse": "^1.1.1",
+    "playwright": "^1.48.0"
+  }
+}

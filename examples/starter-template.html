@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{FULL_NAME}} - {{TARGET_TITLE}}</title>
+<style>
+  /* ATS-safe: single column, system fonts, real text, no icons/tables/images */
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  body { font-family: Arial, Helvetica, sans-serif; font-size: 10pt; line-height: 1.4; color: #111; margin: 0; }
+  .page { width: 210mm; min-height: 297mm; padding: 15mm 16mm; background: #fff; }
+  @media screen {
+    body { background: #e5e7eb; padding: 18px 0; display: flex; justify-content: center; }
+    .page { box-shadow: 0 4px 24px rgba(0, 0, 0, .14); }
+  }
+  h1 { font-size: 20pt; margin: 0 0 2pt; }
+  .title { font-size: 11pt; color: #444; margin-bottom: 4pt; }
+  .contact { font-size: 9.5pt; color: #333; margin-bottom: 10pt; }
+  h2 { font-size: 10.5pt; text-transform: uppercase; letter-spacing: .06em; border-bottom: 1px solid #111; padding-bottom: 2pt; margin: 12pt 0 6pt; }
+  .entry { margin-bottom: 8pt; break-inside: avoid; }
+  .entry-head { font-weight: bold; }
+  .entry-sub { color: #444; font-style: italic; margin-bottom: 2pt; }
+  ul { margin: 2pt 0 0 14pt; padding: 0; }
+  li { margin-bottom: 1.5pt; }
+  p { margin: 0 0 4pt; }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>{{FULL_NAME}}</h1>
+  <div class="title">{{TARGET_TITLE}}</div>
+  <div class="contact">{{CITY, COUNTRY}} | <a href="tel:{{PHONE_RAW}}">{{PHONE}}</a> | <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> | <a href="{{LINKEDIN_URL}}">LinkedIn</a></div>
+
+  <h2>Summary</h2>
+  <p>{{SUMMARY}}</p>
+
+  <h2>Skills</h2>
+  <p><strong>{{SKILL_GROUP}}:</strong> {{SKILLS_COMMA_SEPARATED}}</p>
+
+  <h2>Experience</h2>
+  <div class="entry">
+    <div class="entry-head">{{JOB_TITLE}} | {{COMPANY}}</div>
+    <div class="entry-sub">{{MM/YYYY}} - {{MM/YYYY or Present}} | {{CITY, COUNTRY}}</div>
+    <ul><li>{{ACHIEVEMENT_BULLET}}</li></ul>
+  </div>
+
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="entry-head">{{DEGREE}} | {{INSTITUTION}}</div>
+    <div class="entry-sub">{{YYYY - YYYY}}</div>
+  </div>
+
+  <h2>Languages</h2>
+  <p>{{LANGUAGE (level)}}, {{LANGUAGE (level)}}</p>
+</div>
+</body>
+</html>
