@@ -56,7 +56,7 @@ Starting from `workspace/03-base-cv/<Firstname>-<Lastname>-CV-Base.html`, apply 
 Never treat the first tailored HTML as "done and passive". Act like a live **Jobstep / Jobscan coach**:
 1. **After each HTML generation/update:**
    - Recalculate the **4-bucket match % score** (`Base CV %` -> `Prev %` -> `Current Tailored %`, showing exact bucket changes: `Keywords /40`, `Title & Experience /25`, `Achievements /20`, `ATS Format & Language /15`).
-   - Show concisely what changed in `source/<Firstname>-<Lastname>-CV-<Target>.html` and provide the clickable `file://` link + raw `file:///absolute/path/...` URL (no backticks) + `Cmd+R` / `F5` reminder.
+   - Show concisely what changed in `source/<Firstname>-<Lastname>-CV-<Target>.html` and share the preview per `AGENTS.md` (in visual desktop apps/IDEs: open in native built-in browser/preview or give a clickable `file://` link only; in terminal/CLI: clickable `file://` link + raw `file:///absolute/path/...` URL without backticks + `Cmd+R` / `F5` reminder).
    - List the **remaining highest-upside gaps / unexplored requirements** from `source/<Target>-job.md` (with estimated `+%` gain) and ask **2-4 targeted coaching questions** to uncover real experience the user hasn't added to `master-profile.md` yet (commercial, freelance, pet projects, university, tools, workflows like Scrum/CI/CD/testing, or metric details).
 2. **Whenever the user answers or confirms new facts:**
    - Immediately record the verified fact (with accurate tier: `Core` vs `Basic` + real context) in `workspace/02-profile/master-profile.md` AND update `source/<Target>-job.md` matrix if applicable.
@@ -78,7 +78,7 @@ Check `cover_letter`, `cover_letter_language_policy`, and `cover_letter_format` 
        - **Paragraph 3 (Logistics & CTA):** Location/work mode/contract availability + brief call to action and sign-off.
      - Strictly short hyphens (`-`) only, zero generic AI clichés (*"I am writing to express my strong interest..."*, *"thrilled"*, *"passionate visionary"*).
   3. **Preview & Copy-Paste `.txt`:**
-     - Provide clickable `file://` link + raw `file:///...` URL to `source/<Firstname>-<Lastname>-Cover-Letter-<Target>.html` (`Cmd+R` / `F5`).
+     - Share `source/<Firstname>-<Lastname>-Cover-Letter-<Target>.html` per `AGENTS.md` (native preview / clickable `file://` link in visual apps; clickable link + raw `file:///...` URL + `Cmd+R` / `F5` in terminal).
      - If `cover_letter_format: pdf+txt`, also write `workspace/04-applications/<folder>/source/<Firstname>-<Lastname>-Cover-Letter-<Target>.txt` containing ONLY the clean greeting, paragraphs, and sign-off (zero repeated contact header, zero mid-paragraph line wraps) ready to paste directly into JustJoin.IT / NoFluffJobs / LinkedIn / ATS text fields.
 
 ## Step 5 — Approval, PDF Rendering & Verification
@@ -99,5 +99,5 @@ Once the user approves `source/<Firstname>-<Lastname>-CV-<Target>.html` (and cov
    - Zero em/en-dashes (`—` or `–`)
    - Clickable links intact
 3. Delete any temporary draft files in `workspace/04-applications/<folder>/drafts/` if present so the application folder cleanly holds `<Firstname>-<Lastname>-CV-<Target>.pdf` (plus optional cover letter PDF) and `source/` (`<Target>-job.md`, `<Firstname>-<Lastname>-CV-<Target>.html`, optional cover letter HTML + `.txt`).
-4. Give clickable `file://` markdown links alongside the raw `file:///absolute/path/...` URL (not inside backticks) to the final PDF(s). If a Cover Letter was generated (`cover_letter_format: pdf+txt`), also print its clean plain-text body inside a fenced code block in the chat response so the user can 1-click copy it into web form textareas without opening `source/`.
+4. Share the final PDF(s) per `AGENTS.md` (open in native preview or provide clickable `file://` markdown links in visual apps; clickable `file://` links alongside raw `file:///absolute/path/...` URLs without backticks in terminal/CLI). If a Cover Letter was generated (`cover_letter_format: pdf+txt`), also print its clean plain-text body inside a fenced code block in the chat response so the user can 1-click copy it into web form textareas without opening `source/`.
 5. **Immediately trigger `04-track-notion` (Phase C):** If Notion is configured (`workspace/02-profile/config.yml` -> `notion.mode != none` / `unset`), create the new application row in the Notion Applications database, populate its properties, upload `<Firstname>-<Lastname>-CV-<Target>.pdf` (plus `<Firstname>-<Lastname>-Cover-Letter-<Target>.pdf` if generated) via `notion-create-file-upload`, and embed the `<pdf>` block(s) at the top of the Notion page alongside the vacancy analysis.

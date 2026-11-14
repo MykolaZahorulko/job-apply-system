@@ -10,7 +10,7 @@ Role: an experienced recruiter + ATS specialist sitting next to the user, guidin
    - update `workspace/02-profile/master-profile.md`;
    - overwrite `workspace/03-base-cv/source/<Firstname>-<Lastname>-CV-Base.html` (and snapshot `workspace/03-base-cv/drafts/vN.html`) - HTML only, no PNGs or intermediate PDFs in `workspace/03-base-cv/`;
    - verify A4 fit (1 page, no giant empty gap above footer/GDPR);
-   - give a clickable `file://` link + raw `file:///...` URL + exact path and remind how to refresh (`Cmd+R` / `F5`);
+   - share the preview per `AGENTS.md` (in visual desktop apps/IDEs: open in native built-in browser/preview or give a clickable `file://` link only; in terminal/CLI: clickable `file://` link + raw `file:///...` URL + `Cmd+R` / `F5` reminder);
    - recalculate and show the **market-fit score (`start% -> prev% -> new%`)** across the 4 buckets (Keywords 40, Experience 25, Achievements 20, ATS Format 15), and immediately launch the next high-leverage coaching question until the base CV is ready for final approval.
 
 ## Typical coaching questions

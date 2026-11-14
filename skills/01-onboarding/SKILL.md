@@ -63,7 +63,7 @@ Act as a hands-on Jobstep/ATS coach leading the user step by step. **Iterate in 
    - Path B/C: propose 2-3 ATS-safe HTML preview options (e.g. Classic Navy Band, Minimalist Monochrome, Modern Clean Accent) using `examples/starter-template.html` or local OFL fonts in `assets/fonts/`.
 2. **Live HTML preview right away.** Write `workspace/03-base-cv/source/<Firstname>-<Lastname>-CV-Base.html` (with `@media screen` A4 sheet styling so it looks like a crisp page in a browser, and `@media print` for exact A4 output; link local fonts via `../../../assets/fonts/...`). Also save snapshot `workspace/03-base-cv/drafts/v1.html`.
    Make opening the preview effortless for non-technical users:
-   - Give a clickable `file://` link to `workspace/03-base-cv/source/<Firstname>-<Lastname>-CV-Base.html` AND print the raw `file:///absolute/path/to/workspace/03-base-cv/source/<Firstname>-<Lastname>-CV-Base.html` URL (without backticks);
+   - Share `workspace/03-base-cv/source/<Firstname>-<Lastname>-CV-Base.html` per `AGENTS.md`: in a visual desktop app/IDE, open it in the native built-in browser/preview (or give a clickable `file://` link only); in a terminal/CLI, give a clickable `file://` link AND print the raw `file:///absolute/path/to/workspace/03-base-cv/source/<Firstname>-<Lastname>-CV-Base.html` URL (without backticks);
    - Explain on the first preview: *"Click the link or double-click `<Firstname>-<Lastname>-CV-Base.html` in your file manager - it opens in your browser as an A4 sheet. Keep that one tab open and press `Cmd+R` (Mac) or `F5` (Windows) after each update."*
    - Never open duplicate tabs; always overwrite the same `workspace/03-base-cv/source/<Firstname>-<Lastname>-CV-Base.html` file.
 3. **Section-by-section coaching** in order, one section per turn:
@@ -87,13 +87,13 @@ Run this step whenever `cover_letter` in `workspace/02-profile/config.yml` is `a
    - If the user placed a cover letter in `workspace/01-originals/my-cover-letters/`: inspect ATS readability (`node tools/check-pdf.mjs` + visual/text check), flag parser errors, typos, missing contact headers, generic openings, and run an **honesty check** against `workspace/02-profile/master-profile.md` (ask the user to confirm any new facts, projects, tools, contract preferences, or notice period before including them, and add confirmed facts to `master-profile.md`).
    - If building from scratch: start from `examples/starter-cover-letter-template.html` and match the **visual branding** of `workspace/03-base-cv/source/<Firstname>-<Lastname>-CV-Base.html` (same header band, local fonts via `../../../assets/fonts/`, colors, clickable contacts, no GDPR/RODO clutter).
 2. **Build & coach in HTML preview:**
-   - Save `workspace/03-base-cv/source/<Firstname>-<Lastname>-Cover-Letter-Base.html` (plus optional `drafts/` snapshot during edits), give clickable `file://` link + raw `file:///...` URL + `Cmd+R` / `F5` reminder.
+   - Save `workspace/03-base-cv/source/<Firstname>-<Lastname>-Cover-Letter-Base.html` (plus optional `drafts/` snapshot during edits) and share the preview per `AGENTS.md` (native preview/clickable link in visual apps; clickable link + raw URL + `Cmd+R` / `F5` in terminal).
    - Keep the base template **ultra-short & scannable (80-130 words, 3 concise paragraphs, 1 page A4)** with no `City, Date`, no `"Re:"` / `"Dotyczy:"` clutter (just clean `[Company Name]`), and no RODO/GDPR block (that lives in the CV), using strictly short hyphens (`-`) and zero clichés.
 3. **Approval -> final PDF verification:**
-   - Once approved, render `workspace/03-base-cv/<Firstname>-<Lastname>-Cover-Letter-Base.pdf` via `node tools/html-to-pdf.mjs`, verify with `node tools/check-pdf.mjs` (`Pages: 1`, zero XRef/font errors, clickable links intact), delete `drafts/`, and share clickable `file://` links + raw URLs.
+   - Once approved, render `workspace/03-base-cv/<Firstname>-<Lastname>-Cover-Letter-Base.pdf` via `node tools/html-to-pdf.mjs`, verify with `node tools/check-pdf.mjs` (`Pages: 1`, zero XRef/font errors, clickable links intact), delete `drafts/`, and share the PDF per `AGENTS.md`.
 
 ## Step 5 — Finish & Transition to Notion + Applying
-Summarize created files (`workspace/01-originals/`, `workspace/02-profile/`, `workspace/03-base-cv/`), give clickable `file://` links + raw `file:///...` URLs to `<Firstname>-<Lastname>-CV-Base.html`/`.pdf` (and `<Firstname>-<Lastname>-Cover-Letter-Base.html`/`.pdf` if created), list remaining true skill gaps, and transition into applying:
+Summarize created files (`workspace/01-originals/`, `workspace/02-profile/`, `workspace/03-base-cv/`), share `<Firstname>-<Lastname>-CV-Base.html`/`.pdf` (and `<Firstname>-<Lastname>-Cover-Letter-Base.html`/`.pdf` if created) per `AGENTS.md`, list remaining true skill gaps, and transition into applying:
 - Confirm the base templates are ready to use and immediately launch `04-track-notion` Phase A (ask whether to connect/use an existing Notion page or create a new one, then offer top job-boards research for their country) before asking for the first job posting (`02-analyze-job`).
 
 ## Tooling
