@@ -82,7 +82,7 @@ Act as a hands-on Jobstep/ATS coach leading the user step by step. **Iterate in 
    4. Show final before -> after score (`start% -> final%`).
 
 ## Step 4B — Coached Base Cover Letter (`workspace/03-base-cv/source/<Firstname>-<Lastname>-Cover-Letter-Base.html`)
-Run this step whenever `cover_letter` in `workspace/02-profile/config.yml` is `always` or `ask`:
+Run this step whenever `cover_letter` in `workspace/02-profile/config.yml` is `always` or `ask` (or **on-demand later** if a user who initially skipped it / chose `never` asks to create a Cover Letter template):
 1. **Audit existing sample OR start from template:**
    - If the user placed a cover letter in `workspace/01-originals/my-cover-letters/`: inspect ATS readability (`node tools/check-pdf.mjs` + visual/text check), flag parser errors, typos, missing contact headers, generic openings, and run an **honesty check** against `workspace/02-profile/master-profile.md` (ask the user to confirm any new facts, projects, tools, contract preferences, or notice period before including them, and add confirmed facts to `master-profile.md`).
    - If building from scratch: start from `examples/starter-cover-letter-template.html` and match the **visual branding** of `workspace/03-base-cv/source/<Firstname>-<Lastname>-CV-Base.html` (same header band, local fonts via `../../../assets/fonts/`, colors, clickable contacts, no GDPR/RODO clutter).

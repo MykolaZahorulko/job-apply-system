@@ -65,10 +65,10 @@ Never treat the first tailored HTML as "done and passive". Act like a live **Job
 
 ## Step 4 — Cover Letter (`source/<Firstname>-<Lastname>-Cover-Letter-<Target>.html` + optional `.txt`)
 Check `cover_letter`, `cover_letter_language_policy`, and `cover_letter_format` in `workspace/02-profile/config.yml`:
-- If `cover_letter: never`, skip this step.
+- If `cover_letter: never`, skip this step **unless the user explicitly asks for a Cover Letter** (for this application or to start using cover letters now).
 - If `cover_letter: ask`, ask the user concisely whether to generate a Cover Letter for this application (especially helpful when the vacancy asks for one, has specific screening questions, or match % benefits from framing relevant projects).
 - If requested (or `always`):
-  1. **Base & Visual Sync:** Start from `workspace/03-base-cv/source/<Firstname>-<Lastname>-Cover-Letter-Base.html` if it exists (adjusting asset paths from `../../../assets/` to `../../../../assets/`), or from `examples/starter-cover-letter-template.html` styled identically to `source/<Firstname>-<Lastname>-CV-<Target>.html` (same header band, contacts, local fonts, accent color, 1-page A4).
+  1. **Base & Visual Sync (Plus Late Onboarding Option):** Start from `workspace/03-base-cv/source/<Firstname>-<Lastname>-Cover-Letter-Base.html` if it exists (adjusting asset paths from `../../../assets/` to `../../../../assets/`), or from `examples/starter-cover-letter-template.html` styled identically to `source/<Firstname>-<Lastname>-CV-<Target>.html` (same header band, contacts, local fonts, accent color, 1-page A4). If `*-Cover-Letter-Base.html` does not exist yet (or `cover_letter` is still `never`), also offer to create and save the reusable Base Cover Letter template (`01-onboarding` Step 4B) and update `cover_letter` (`ask` / `always`) and `cover_letter_format` (`pdf+txt` / `pdf`) in `workspace/02-profile/config.yml`.
   2. **Vacancy-Specific Personalization (Ultra-Short, Direct & ATS-Synced):**
      - Determine language from `cover_letter_language_policy` (`follow_cv` by default).
      - Mirror the exact vacancy role title in the header subtitle when honest; show only the clean `<Company Name>` line above the greeting (no `City, Date`, no `"Dotyczy:"` / `"Re:"` prefix, and no RODO/GDPR clause since it is in the CV).
